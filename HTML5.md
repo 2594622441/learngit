@@ -82,7 +82,6 @@ Emmet插件：自动生成HTML代码片段（智能补全代码）
 ```
 
 # 语义化
-[toc]
 ## 1.每一个元素都有具体的含义
 a元素：超链接
 p元素：段落
@@ -102,7 +101,6 @@ h1元素：一级标题
 `方便各种插件的编写和浏览器对插件的支持，如阅读模式、语音模式等`
 
 # 文本元素
-[toc]
 `HTML5中支持的元素：HTML5元素周期表（百度搜索）`
 ## h
 h1-h6:表示一级标题-六级标题 
@@ -159,7 +157,6 @@ Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, modi assumenda v
 `
 
 # HTML实体
-[toc]
 实体字符，HTML Entity,通常用于在页面中显示一些特殊符号。
 1.&单词;
 2.&#数字;
@@ -173,7 +170,6 @@ Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, modi assumenda v
 ```
 
 # a元素
-[toc]
  ## href属性
  hyper reference（超引用），通常表示跳转地址。
 ### 1.跳转地址，一般会刷新页面。
@@ -231,7 +227,6 @@ targe属性表示跳转窗口位置（默认为当前窗口），取值为_self/
 `其中，title为鼠标放到链接上时显示的文字，target属性默认为_self`
 
 # 路径（地址）的写法
-[toc]
 ## 站内资源和站外资源
 1.站内资源：当前网站的资源
 2.站外资源：非当前网站的资源
@@ -257,7 +252,6 @@ schema://host:port/path
 以./开头，表示当前目录(也可省略)，而../则表示上一级目录
 
 # 图片元素
-[toc]
 ##  img元素
 image的缩写，为空元素,
 1.src属性，如：
@@ -296,7 +290,6 @@ image的缩写，为空元素,
 
 
 # 多媒体元素
-[toc]
 ## 1.video元素，即视频元素
 
 ```
@@ -339,7 +332,6 @@ mp4/webm、mp3
 ```
 
 # 列表元素
-[toc]
 ## 有序列表
 ol: orderd list
 li: list item
@@ -377,7 +369,6 @@ dd: definition description，为dl的子元素，定义描述
 </dl>
 ```
 # 容器元素
-[toc]
 该元素内部用于放置其它元素，用于划分区域
 ## div元素
 没有语义，之前都是使用div划分区域
@@ -392,7 +383,6 @@ section元素：通常用于表示文章中的章节
 aside元素：通常用于表示侧边栏，即附加信息
 
 # 元素的包含关系
-[toc]
 以前：块级元素可以包含行级元素，反之不可以（a元素除外）
 现在：由元素的语义和内容类别决定
 
