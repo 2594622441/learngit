@@ -209,9 +209,45 @@ link > visited > hover > active
 # 盒模型
 box：每个元素在页面中都会生成一个矩形区域（盒子）
 ## 盒子类型
-1）行盒：CSS属性display为inline的元素，不换行
-2）块盒：display为block的元素，独占一行
+>1）行盒：CSS属性display为inline的元素，不换行(span、a、        img、video、audio等)
+    如，span元素，默认为行盒
+>2）块盒：display为block的元素，独占一行（容器元素、h1~h6、p）
+    如，div元素，默认是块盒
 
+## 盒子的组成部分(快递盒)
+>1）内容: content(快递实物)，通常叫做整个盒子的**内容盒**：
+    `width和height设置的是盒子内容的宽高`
+>2）填充: padding(泡沫填充)，又名内边距：
+    `盒子边框到盒子内容的距离`
+    padding-top、padding-bottom、padding-left、padding-right
+    简写属性：padding：上 右 下 左，或padding：上下 左右，
+    或padding：上下左右
+    填充区 + 内容区 = **填充盒**
+>3）边框: border(边框 = 边框样式 + 边框宽度 + 边框颜色):
+    border-width和border-style设置边框，border-style默认值为none，此时border不显示，border-color默认为内容文本的颜色
+    边框 + 填充区 + 内容区 = **边框盒**
+>4）外边距: margin（边框和其他盒子之间的距离）
 
-
-
+# 盒模型应用
+## 改变宽高范围
+默认情况下，width盒height设置的是内容盒的宽高
+>页面重构师：将psd文件（设计稿）制作为静态页面。
+    衡量设计稿尺寸的时候，往往使用的是边框盒，但设置width盒height则设置的是内容盒
+    1）精确计算：边框盒尺寸-边框尺寸 = 内容盒尺寸
+    2）CSS3：box-sizing， 令box-sizing: border-size则width和height设置的尺寸即为边框盒的尺寸
+## 改变背景覆盖范围
+默认情况下，背景覆盖边框盒，可以通过background-clip进行修改
+## 溢出处理
+>默认情况会自动调整宽高(如果没有设置值):
+    overflow控制内容溢出边框盒后的处理方式，默认为visiable,可设置为hidden或scroll或auto。
+## 断词规则（word-break，一般不设置，使用默认值）
+>影响文字在什么位置被截断（换行）
+    1）normal：普通。CJK字符（单个字符位置截断），非CJK字符（单词位置截断）
+    2）breal-all；截断所有。所有字符都在单个字符位置截断（和CJK字符相同）
+    3）keep-all：保持所有。所有字符都在单词位置截断（和单词一样）
+## 空白处理
+如，文字过多时，不换行，在最末尾显示...
+>即 white-space: nowrap;
+    over-flow: hidden;
+    text-overflow: ellipsis;
+这三个属性同时设置，即可达到上述效果
